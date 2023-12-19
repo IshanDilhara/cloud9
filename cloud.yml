@@ -1,0 +1,23 @@
+# .github/workflows/deploy.yml
+
+name: Deploy Document
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Deploy Document
+      run: |
+        aws lambda invoke \
+          --function-name YourLambdaFunctionName \
+          --payload '{"filename": "document.txt", "fileContent": "Hello, World!"}' \
+          output.json

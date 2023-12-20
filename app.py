@@ -5,12 +5,12 @@ import boto3
 app = Flask(__name__)
 
 # AWS credentials
-AWS_ACCESS_KEY = 'AKIA2E5E4AZZMHCPGYGF'
-AWS_SECRET_KEY = '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'
+AWS_ACCESS_KEY = ''
+AWS_SECRET_KEY = ''
 AWS_REGION = 'us-east-1'
 
 # S3 bucket configuration
-S3_BUCKET_NAME = 'dmsbkt'
+S3_BUCKET_NAME = ''
 
 # Cognito configuration
 COGNITO_USER_POOL_ID = 'your-user-pool-id'
